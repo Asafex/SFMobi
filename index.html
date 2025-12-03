@@ -779,28 +779,29 @@
             </div>
             
             <div class="contact-form">
-                <form action="mailto:safetrip@gmail.com" method="post" enctype="text/plain">
-                    <div class="form-group">
-                        <label for="name">Nome</label>
-                        <input type="text" id="name" name="name" class="form-control" required="">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" class="form-control" required="">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Telefone</label>
-                        <input type="tel" id="phone" name="phone" class="form-control" required="">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Mensagem</label>
-                        <textarea id="message" name="message" class="form-control" required=""></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary" onclick="alert(&#39;Na opção a seguir escolha o aplicativo do GMAIL&#39;)">ENVIAR MENSAGEM</button>
+                <form id="contactForm">
+        <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" class="form-control" required="">
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" class="form-control" required="">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Telefone</label>
+            <input type="tel" id="phone" name="phone" class="form-control" required="">
+        </div>
+
+        <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" class="form-control" required=""></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">ENVIAR MENSAGEM</button>
+    </form>
                 </form>
             </div>
         </div>
@@ -888,9 +889,9 @@ form.addEventListener('submit', async (e) => {
 
     try {
         const response = await fetch('https://safe-trip-backend-production.up.railway.app/pessoa', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
+         method: 'POST',
+         headers: {
+                'Content-Type': 'application/json'
     },
     body: JSON.stringify(data)
 });
