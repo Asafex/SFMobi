@@ -898,7 +898,7 @@ form.addEventListener('submit', async (e) => {
 
 
         const result = await response.json();
-        alert(result.mensagem || 'Mensagem enviada com sucesso!');
+        alert(result.message || 'Mensagem enviada com sucesso!');
         form.reset();
     } catch (error) {
         console.error(error);
